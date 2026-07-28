@@ -1,0 +1,29 @@
+# =========================
+# Sublime Web Root
+# =========================
+
+# Environment variables
+.env
+.env.*
+
+# Logs
+*.log
+
+# Operating System
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/settings.json
+
+# Temporary files
+*.tmp
+*.temp
+
+# Build files
+dist/
+build/
+
+# Local configuration
+*.local
