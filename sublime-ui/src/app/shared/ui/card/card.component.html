@@ -1,0 +1,25 @@
+<article class="card">
+
+  @if (image) {
+  <img class="card__image" [src]="image" [alt]="title" />
+  }
+
+  <div class="card__content">
+
+    @if (title) {
+    <h3 class="card__title">
+      {{ title }}
+    </h3>
+    }
+
+    @if (description) {
+    <p class="card__description">
+      {{ description }}
+    </p>
+    }
+    <ng-content></ng-content>
+
+
+  </div>
+
+</article>
