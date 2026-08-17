@@ -1,75 +1,32 @@
-<div class="min-h-screen bg-slate-100 p-10">
 
-  <div class="mx-auto max-w-4xl">
 
-    <h1 class="mb-8 text-3xl font-bold text-slate-900">
-      Sublime Web — Button System
-    </h1>
+<div class="p-8">
+  <h1 class="mb-6 text-3xl font-bold">
+    Sublime web
+  </h1>
 
-    <div class="rounded-2xl bg-white p-8 shadow-lg">
+  <div class="max-w-sm">
 
-      <h2 class="mb-6 text-xl font-semibold">
-        Variants
-      </h2>
 
-      <div class="flex flex-wrap gap-4">
+    <app-card title="Tour Volcán Villarrica" description="Ascenso guiado al volcán."
+      image="https://images.unsplash.com/photo-1510798831971-661eb04b3739" actionLabel="Ver cabaña">
 
-        <app-button>
-          Primary
-        </app-button>
+      <app-button variant="danger">
+        Ver tour
+      </app-button>
 
-        <app-button variant="secondary">
-          Secondary
-        </app-button>
-
-        <app-button variant="outline">
-          Outline
-        </app-button>
-
-        <app-button variant="danger">
-          Danger
-        </app-button>
-
-      </div>
-
-      <h2 class="mb-6 mt-10 text-xl font-semibold">
-        Sizes
-      </h2>
-
-      <div class="flex flex-wrap items-center gap-4">
-
-        <app-button size="sm">
-          Small
-        </app-button>
-
-        <app-button size="md">
-          Medium
-        </app-button>
-
-        <app-button size="lg">
-          Large
-        </app-button>
-
-      </div>
-
-      <h2 class="mb-6 mt-10 text-xl font-semibold">
-        States
-      </h2>
-
-      <div class="flex flex-wrap gap-4">
-
-        <app-button>
-          Active
-        </app-button>
-
-        <app-button [disabled]="true">
-          Disabled
-        </app-button>
-
-      </div>
-
-    </div>
-
+    </app-card>
   </div>
-
 </div>
+
+<app-container>
+  <div class="rounded-xl bg-slate-900 p-8 text-white">
+    Container XL
+  </div>
+</app-container>
+
+<app-container size="sm">
+  <div class="mt-6 rounded-xl bg-slate-200 p-8">
+    Container Small
+  </div>
+</app-container>
