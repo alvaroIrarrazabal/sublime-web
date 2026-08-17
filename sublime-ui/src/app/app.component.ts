@@ -6,11 +6,12 @@ import { ContainerComponent } from "./shared/ui/container/container.component";
 import { NavbarComponent } from "./shared/components/navbar/navbar.component";
 import { HeroComponent } from './features/cabins/components/hero/hero.component';
 import { CabinsSectionComponent } from "./features/cabins/components/cabins-section/cabins-section.component";
+import { ServicesSectionComponent } from "./features/cabins/components/services-section/services-section.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ButtonComponent, CardComponent, ContainerComponent, NavbarComponent, HeroComponent, CabinsSectionComponent],
+  imports: [RouterOutlet, ButtonComponent, CardComponent, ContainerComponent, NavbarComponent, HeroComponent, CabinsSectionComponent, ServicesSectionComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
