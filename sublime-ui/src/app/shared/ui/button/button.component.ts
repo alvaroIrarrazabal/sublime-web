@@ -1,4 +1,6 @@
+import { NgTemplateOutlet } from '@angular/common';
 import { Component, Input } from '@angular/core';
+
 
 export type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'danger';
 
@@ -7,7 +9,7 @@ export type ButtonSize = 'sm' | 'md' | 'lg';
 @Component({
   selector: 'app-button',
   standalone: true,
-  imports: [],
+  imports: [NgTemplateOutlet],
   templateUrl: './button.component.html',
   styleUrl: './button.component.scss',
 })
@@ -20,6 +22,11 @@ export class ButtonComponent {
 
   @Input()
   disabled = false;
+
+  @Input() href?: string;
+
+  @Input()
+  type: 'button' | 'submit' | 'reset' = 'button';
 
   get buttonClasses(): string {
     return [

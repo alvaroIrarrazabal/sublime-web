@@ -1,6 +1,13 @@
-<button
- type="button"
- [disabled]="disabled"
- [class]="buttonClasses">
+<ng-template #content>
   <ng-content></ng-content>
+</ng-template>
+
+@if (href) {
+<a [href]="href" [class]="buttonClasses">
+  <ng-container [ngTemplateOutlet]="content"></ng-container>
+</a>
+} @else {
+<button [type]="type" [disabled]="disabled" [class]="buttonClasses">
+  <ng-container [ngTemplateOutlet]="content"></ng-container>
 </button>
+}
