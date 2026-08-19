@@ -27,6 +27,9 @@ export class ButtonComponent {
 
   @Input()
   type: 'button' | 'submit' | 'reset' = 'button';
+  @Input() target?: '_self' | '_blank' | '_parent' | '_top';
+
+  @Input() rel?: string;
 
   get buttonClasses(): string {
     return [

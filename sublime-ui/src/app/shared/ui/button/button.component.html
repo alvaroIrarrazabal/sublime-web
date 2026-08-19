@@ -3,7 +3,11 @@
 </ng-template>
 
 @if (href) {
-<a [href]="href" [class]="buttonClasses">
+<a 
+[href]="href"
+[target]="target"
+[rel]="rel"
+ [class]="buttonClasses">
   <ng-container [ngTemplateOutlet]="content"></ng-container>
 </a>
 } @else {
