@@ -21,6 +21,7 @@ export class NavbarComponent {
     { label: 'Cabañas', href: '#cabanas' },
     { label: 'Servicios', href: '#servicios' },
     { label: 'Galería', href: '#galeria' },
+    { label: 'Sobre Nosotros', href: '#nosotros' },
     { label: 'Contacto', href: '#contacto' },
   ];
 
