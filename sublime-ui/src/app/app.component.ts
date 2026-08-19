@@ -10,11 +10,12 @@ import { ServicesSectionComponent } from "./features/cabins/components/services-
 import { GallerySectionComponent } from "./features/cabins/components/gallery-section/gallery-section.component";
 import { AboutSectionComponent } from "./features/cabins/components/about-section/about-section.component";
 import { ContactSectionComponent } from "./features/cabins/components/contact-section/contact-section.component";
+import { FooterComponent } from "./shared/components/footer/footer.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ButtonComponent, CardComponent, ContainerComponent, NavbarComponent, HeroComponent, CabinsSectionComponent, ServicesSectionComponent, GallerySectionComponent, AboutSectionComponent, ContactSectionComponent],
+  imports: [RouterOutlet, ButtonComponent, CardComponent, ContainerComponent, NavbarComponent, HeroComponent, CabinsSectionComponent, ServicesSectionComponent, GallerySectionComponent, AboutSectionComponent, ContactSectionComponent, FooterComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
