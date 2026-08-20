@@ -1,32 +1,53 @@
+<app-navbar
+  [brand]="site.brand"
+  ctaLabel="Reserva Ahora"
+  [ctaUrl]="site.contact.whatsappUrl"
+>
+</app-navbar>
 
+<app-cabins-hero
+  [eyebrow]="site.hero.eyebrow"
+  [title]="site.hero.title"
+  [description]="site.hero.description"
+  [backgroundImage]="site.hero.backgroundImage"
+  [primaryLabel]="site.hero.primaryLabel"
+  [primaryHref]="site.hero.primaryHref"
+  [secondaryLabel]="site.hero.secondaryLabel"
+  [secondaryHref]="site.hero.secondaryHref"
+>
+</app-cabins-hero>
 
-<div class="p-8">
-  <h1 class="mb-6 text-3xl font-bold">
-    Sublime web
-  </h1>
+<app-cabins-section></app-cabins-section>
 
-  <div class="max-w-sm">
+<app-services-section></app-services-section>
 
+<app-gallery-section></app-gallery-section>
 
-    <app-card title="Tour Volcán Villarrica" description="Ascenso guiado al volcán."
-      image="https://images.unsplash.com/photo-1510798831971-661eb04b3739" actionLabel="Ver cabaña">
+<app-about-section
+  [eyebrow]="site.about.eyebrow"
+  [title]="site.about.title"
+  [description]="site.about.description"
+  [image]="site.about.image"
+  [highlights]="site.about.highlights"
+>
+</app-about-section>
 
-      <app-button variant="danger">
-        Ver tour
-      </app-button>
+<app-contact-section
+  [address]="site.contact.address"
+  [phone]="site.contact.phone"
+  [email]="site.contact.email"
+  [whatsappUrl]="site.contact.whatsappUrl"
+  [mapUrl]="site.contact.mapUrl"
+>
+</app-contact-section>
 
-    </app-card>
-  </div>
-</div>
-
-<app-container>
-  <div class="rounded-xl bg-slate-900 p-8 text-white">
-    Container XL
-  </div>
-</app-container>
-
-<app-container size="sm">
-  <div class="mt-6 rounded-xl bg-slate-200 p-8">
-    Container Small
-  </div>
-</app-container>
+<app-footer
+  [brand]="site.brand"
+  [description]="site.footer.description"
+  [phone]="site.contact.phone"
+  [email]="site.contact.email"
+  [whatsappUrl]="site.contact.whatsappUrl"
+  [instagramUrl]="site.footer.instagramUrl ?? ''"
+  [facebookUrl]="site.footer.facebookUrl ?? ''"
+>
+</app-footer>
