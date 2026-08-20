@@ -1,7 +1,11 @@
 import { CabinsSiteConfig } from '../models/cabins-site.model';
 
 export const CABINS_SITE_CONFIG: CabinsSiteConfig = {
-  brand: 'Bosque Andino',
+  brand: {
+    name: 'Bosque Andino',
+    logoUrl: '',
+    logoAlt: 'Bosque Andino',
+  },
 
   contact: {
     phone: '+56 9 1234 5678',

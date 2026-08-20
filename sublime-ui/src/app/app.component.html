@@ -1,5 +1,7 @@
 <app-navbar
-  [brand]="site.brand"
+  [brandName]="site.brand.name"
+  [logoUrl]="site.brand.logoUrl ?? ''"
+  [logoAlt]="site.brand.logoAlt ?? site.brand.name"
   ctaLabel="Reserva Ahora"
   [ctaUrl]="site.contact.whatsappUrl"
 >
@@ -42,7 +44,6 @@
 </app-contact-section>
 
 <app-footer
-  [brand]="site.brand"
   [description]="site.footer.description"
   [phone]="site.contact.phone"
   [email]="site.contact.email"

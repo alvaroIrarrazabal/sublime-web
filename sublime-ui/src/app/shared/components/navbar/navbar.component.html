@@ -4,9 +4,15 @@
     <div class="flex h-16 items-center justify-between">
 
       <!-- Marca -->
-      <a href="#inicio" class="text-xl font-bold tracking-tight text-slate-900" (click)="closeMenu()">
-        {{ brand }}
-      </a>
+     <a href="#inicio" class="flex items-center gap-3" (click)="closeMenu()">
+       @if (logoUrl) {
+       <img [src]="logoUrl" [alt]="logoAlt" class="h-10 w-auto object-contain" />
+       } @else {
+       <span class="text-xl font-bold tracking-tight text-slate-900">
+         {{ brandName }}
+       </span>
+       }
+     </a>
 
       <!-- Navegación desktop -->
       <nav class="hidden items-center gap-8 lg:flex">
