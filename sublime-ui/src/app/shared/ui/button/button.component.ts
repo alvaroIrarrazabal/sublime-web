@@ -25,9 +25,9 @@ export class ButtonComponent {
 
   @Input() href?: string;
 
-  @Input()
-  type: 'button' | 'submit' | 'reset' = 'button';
-  @Input() target?: '_self' | '_blank' | '_parent' | '_top';
+  @Input() type: 'button' | 'submit' | 'reset' = 'button';
+
+  @Input() target: '_self' | '_blank' | '_parent' | '_top' = '_self';
 
   @Input() rel?: string;
 
