@@ -28,4 +28,16 @@ export class NavbarComponent {
   @Input() ctaLabel = 'Reservar';
 
   @Input() ctaUrl = '#contacto';
+
+isMenuOpen = false;
+
+toggleMenu(): void {
+  this.isMenuOpen = !this.isMenuOpen;
+}
+
+closeMenu(): void {
+  this.isMenuOpen = false;
+}
+
+
 }
