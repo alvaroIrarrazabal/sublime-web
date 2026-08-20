@@ -7,18 +7,19 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#2563EB',
-          dark: '#1D4ED8',
-          soft: '#60A5FA',
-          light: '#DBEAFE',
+          DEFAULT: 'rgb(var(--color-primary) / <alpha-value>)',
+          dark: 'rgb(var(--color-primary-dark) / <alpha-value>)',
+          soft: 'rgb(var(--color-primary-soft) / <alpha-value>)',
+          light: 'rgb(var(--color-primary-light) / <alpha-value>)',
         },
+
         brand: {
-          dark: '#0F172A',
-          surface: '#FFFFFF',
-          background: '#F8FAFC',
+          dark: 'rgb(var(--color-brand-dark) / <alpha-value>)',
+          surface: 'rgb(var(--color-brand-surface) / <alpha-value>)',
+          background: 'rgb(var(--color-brand-background) / <alpha-value>)',
         },
       },
     },
   },
   plugins: [],
-}
+};
