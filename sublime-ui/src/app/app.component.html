@@ -19,11 +19,17 @@
 >
 </app-cabins-hero>
 
-<app-cabins-section></app-cabins-section>
+<app-cabins-section 
+[cabins]="config.cabins">
+</app-cabins-section>
 
-<app-services-section></app-services-section>
+<app-services-section
+ [services]="config.services">
+</app-services-section>
 
-<app-gallery-section></app-gallery-section>
+<app-gallery-section 
+[images]="config.gallery">
+</app-gallery-section>
 
 <app-about-section
   [eyebrow]="site.about.eyebrow"
