@@ -4,84 +4,69 @@
     <div class="flex h-16 items-center justify-between">
 
       <!-- Marca -->
-      <a
-        href="#inicio"
-        class="text-xl font-bold tracking-tight text-slate-900"
-        (click)="closeMenu()">
+      <a href="#inicio" class="text-xl font-bold tracking-tight text-slate-900" (click)="closeMenu()">
         {{ brand }}
       </a>
 
       <!-- Navegación desktop -->
-      <nav class="hidden items-center gap-8 md:flex">
+      <nav class="hidden items-center gap-8 lg:flex">
         @for (item of items; track item.href) {
-          <a
-            [href]="item.href"
-            class="text-sm font-medium text-slate-600 transition hover:text-slate-900">
-            {{ item.label }}
-          </a>
+        <a [href]="item.href" class="text-sm font-medium text-slate-600 transition hover:text-slate-900">
+          {{ item.label }}
+        </a>
         }
       </nav>
 
       <!-- CTA desktop -->
-      <div class="hidden md:block">
-        <app-button
-          [href]="ctaUrl"
-          size="sm">
+      <div class="hidden lg:block">
+        <app-button [href]="ctaUrl" size="sm">
           {{ ctaLabel }}
         </app-button>
       </div>
 
-      <!-- Botón menú mobile -->
-      <button
-        type="button"
-        class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-slate-700 transition hover:bg-slate-50 md:hidden"
-        [attr.aria-expanded]="isMenuOpen"
-        aria-label="Abrir menú"
-        (click)="toggleMenu()">
+      <!-- Botón menú mobile/tablet -->
+      <button type="button"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-slate-700 transition hover:bg-slate-50 lg:hidden"
+        [attr.aria-expanded]="isMenuOpen" aria-label="Abrir menú" (click)="toggleMenu()">
 
         @if (isMenuOpen) {
-          <!-- X -->
-          <span class="text-2xl leading-none">
-            ×
-          </span>
+        <span class="text-2xl leading-none">
+          ×
+        </span>
         } @else {
-          <!-- Hamburguesa -->
-          <span class="text-2xl leading-none">
-            ☰
-          </span>
+        <span class="text-2xl leading-none">
+          ☰
+        </span>
         }
 
       </button>
 
     </div>
 
-    <!-- Menú mobile -->
+    <!-- Menú mobile/tablet -->
     @if (isMenuOpen) {
 
-      <div class="border-t border-slate-100 py-4 md:hidden">
+    <div class="border-t border-slate-100 py-4 lg:hidden">
 
-        <nav class="flex flex-col">
+      <nav class="flex flex-col">
 
-          @for (item of items; track item.href) {
-            <a
-              [href]="item.href"
-              class="rounded-lg px-3 py-3 text-base font-medium text-slate-700 transition hover:bg-slate-50"
-              (click)="closeMenu()">
-              {{ item.label }}
-            </a>
-          }
+        @for (item of items; track item.href) {
+        <a [href]="item.href"
+          class="rounded-lg px-3 py-3 text-base font-medium text-slate-700 transition hover:bg-slate-50"
+          (click)="closeMenu()">
+          {{ item.label }}
+        </a>
+        }
 
-        </nav>
+      </nav>
 
-        <div class="mt-4">
-          <app-button
-            [href]="ctaUrl"
-            size="md">
-            {{ ctaLabel }}
-          </app-button>
-        </div>
-
+      <div class="mt-4">
+        <app-button [href]="ctaUrl" size="md">
+          {{ ctaLabel }}
+        </app-button>
       </div>
+
+    </div>
 
     }
 
