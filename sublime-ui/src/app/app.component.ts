@@ -12,6 +12,7 @@ import { AboutSectionComponent } from "./features/cabins/components/about-sectio
 import { ContactSectionComponent } from "./features/cabins/components/contact-section/contact-section.component";
 import { FooterComponent } from "./shared/components/footer/footer.component";
 import { CABINS_SITE_CONFIG } from './features/cabins/config/cabins-site.config';
+import { ThemeService } from './shared/services/theme.service';
 
 
 
@@ -35,5 +36,7 @@ import { CABINS_SITE_CONFIG } from './features/cabins/config/cabins-site.config'
 export class AppComponent {
   readonly site = CABINS_SITE_CONFIG;
 
-
+  constructor(private readonly themeService: ThemeService) {
+    this.themeService.applyTheme(CABINS_SITE_CONFIG.theme);
+  }
 }

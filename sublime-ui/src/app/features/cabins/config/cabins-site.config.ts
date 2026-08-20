@@ -8,7 +8,8 @@ export const CABINS_SITE_CONFIG: CabinsSiteConfig = {
     email: 'reservas@bosqueandino.cl',
     whatsappUrl: 'https://wa.me/56912345678',
     address: 'Pucón, Región de La Araucanía',
-    mapUrl:     'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3088.4200285591965!2d-71.9676779242316!3d-39.27872397164506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96147f434250b48b%3A0xb6e0048742073d4c!2sLos%20Pellines%20230%2C%204920868%20Pucon%2C%20Puc%C3%B3n%2C%20Araucan%C3%ADa!5e0!3m2!1ses!2scl!4v1787182432349!5m2!1ses!2scl'
+    mapUrl:
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3088.4200285591965!2d-71.9676779242316!3d-39.27872397164506!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96147f434250b48b%3A0xb6e0048742073d4c!2sLos%20Pellines%20230%2C%204920868%20Pucon%2C%20Puc%C3%B3n%2C%20Araucan%C3%ADa!5e0!3m2!1ses!2scl!4v1787182432349!5m2!1ses!2scl',
   },
 
   hero: {
@@ -48,4 +49,17 @@ export const CABINS_SITE_CONFIG: CabinsSiteConfig = {
     instagramUrl: '',
     facebookUrl: '',
   },
+
+  theme: {
+    primary: '37 99 235',
+    primaryDark: '29 78 216',
+    primarySoft: '96 165 250',
+    primaryLight: '219 234 254',
+
+    brandDark: '15 23 42',
+    brandSurface: '255 255 255',
+    brandBackground: '248 250 252',
+  },
 };
+
+

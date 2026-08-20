@@ -1,3 +1,6 @@
+import { SiteTheme } from '../../../shared/models/site-theme.model';
+
+
 export interface CabinsSiteConfig {
   brand: string;
 
@@ -33,4 +36,6 @@ export interface CabinsSiteConfig {
     instagramUrl?: string;
     facebookUrl?: string;
   };
+  
+  theme: SiteTheme;
 }
