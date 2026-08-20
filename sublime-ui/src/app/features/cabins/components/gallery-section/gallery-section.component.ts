@@ -1,44 +1,18 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { ContainerComponent } from '../../../../shared/ui/container/container.component';
+import { GALLERY_IMAGES } from '../../config/gallery.config';
+import { GalleryImage } from '../../models/gallery-image.model';
 
-interface GalleryImage {
-  src: string;
-  alt: string;
-  featured?: boolean;
-}
+
 
 @Component({
   selector: 'app-gallery-section',
   standalone: true,
-  imports: [NgClass,ContainerComponent],
+  imports: [NgClass, ContainerComponent],
   templateUrl: './gallery-section.component.html',
-  styleUrl: './gallery-section.component.scss'
+  styleUrl: './gallery-section.component.scss',
 })
 export class GallerySectionComponent {
-
-  images: GalleryImage[] = [
-    {
-      src: 'https://images.unsplash.com/photo-1510798831971-661eb04b3739',
-      alt: 'Cabaña rodeada de naturaleza en Pucón',
-      featured: true,
-    },
-    {
-      src: 'https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8',  
-      alt: 'Interior cálido de cabaña',
-    },
-    {
-      src: 'https://images.unsplash.com/photo-1470770841072-f978cf4d019e',
-      alt: 'Paisaje natural del sur de Chile',
-    },
-    {
-      src: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85',
-      alt: 'Dormitorio acogedor',
-    },
-    {
-      src: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85',
-      alt: 'Espacio interior de descanso',
-    }
-  ];
-
+  readonly images: GalleryImage[] = GALLERY_IMAGES;
 }
