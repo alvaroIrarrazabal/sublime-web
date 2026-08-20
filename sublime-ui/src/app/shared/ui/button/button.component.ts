@@ -64,7 +64,7 @@ export class ButtonComponent {
 
       case 'primary':
       default:
-        return 'bg-blue-600 text-white hover:bg-blue-700';
+        return 'bg-primary text-white hover:bg-primary-light';
     }
   }
 
