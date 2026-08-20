@@ -11,14 +11,29 @@ import { GallerySectionComponent } from "./features/cabins/components/gallery-se
 import { AboutSectionComponent } from "./features/cabins/components/about-section/about-section.component";
 import { ContactSectionComponent } from "./features/cabins/components/contact-section/contact-section.component";
 import { FooterComponent } from "./shared/components/footer/footer.component";
+import { CABINS_SITE_CONFIG } from './features/cabins/config/cabins-site.config';
+
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ButtonComponent, CardComponent, ContainerComponent, NavbarComponent, HeroComponent, CabinsSectionComponent, ServicesSectionComponent, GallerySectionComponent, AboutSectionComponent, ContactSectionComponent, FooterComponent],
+  imports: [
+    RouterOutlet,
+    NavbarComponent,
+    HeroComponent,
+    CabinsSectionComponent,
+    ServicesSectionComponent,
+    GallerySectionComponent,
+    AboutSectionComponent,
+    ContactSectionComponent,
+    FooterComponent,
+  ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'sublime-ui';
+  readonly site = CABINS_SITE_CONFIG;
+
+
 }

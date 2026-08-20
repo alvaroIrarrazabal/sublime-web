@@ -1,11 +1,21 @@
 <app-navbar
- brand="Bosque Andino"
- ctaLabel="Reserva Ahora"
- ctaUrl="#contacto">
+  [brand]="site.brand"
+  ctaLabel="Reserva Ahora"
+  [ctaUrl]="site.contact.whatsappUrl"
+>
 </app-navbar>
 
-
-<app-cabins-hero></app-cabins-hero>
+<app-cabins-hero
+  [eyebrow]="site.hero.eyebrow"
+  [title]="site.hero.title"
+  [description]="site.hero.description"
+  [backgroundImage]="site.hero.backgroundImage"
+  [primaryLabel]="site.hero.primaryLabel"
+  [primaryHref]="site.hero.primaryHref"
+  [secondaryLabel]="site.hero.secondaryLabel"
+  [secondaryHref]="site.hero.secondaryHref"
+>
+</app-cabins-hero>
 
 <app-cabins-section></app-cabins-section>
 
@@ -13,14 +23,31 @@
 
 <app-gallery-section></app-gallery-section>
 
-<app-about-section></app-about-section>
+<app-about-section
+  [eyebrow]="site.about.eyebrow"
+  [title]="site.about.title"
+  [description]="site.about.description"
+  [image]="site.about.image"
+  [highlights]="site.about.highlights"
+>
+</app-about-section>
 
-<app-contact-section></app-contact-section>
+<app-contact-section
+  [address]="site.contact.address"
+  [phone]="site.contact.phone"
+  [email]="site.contact.email"
+  [whatsappUrl]="site.contact.whatsappUrl"
+  [mapUrl]="site.contact.mapUrl"
+>
+</app-contact-section>
 
 <app-footer
-brand="Bosque Andino"
- description="Cabañas acogedoras rodeadas de naturaleza en Pucón."
- phone="+56 9 1234 5678"
- email="reservas@bosqueandino.cl"
- whatsappUrl="https://wa.me/56912345678">
+  [brand]="site.brand"
+  [description]="site.footer.description"
+  [phone]="site.contact.phone"
+  [email]="site.contact.email"
+  [whatsappUrl]="site.contact.whatsappUrl"
+  [instagramUrl]="site.footer.instagramUrl ?? ''"
+  [facebookUrl]="site.footer.facebookUrl ?? ''"
+>
 </app-footer>
