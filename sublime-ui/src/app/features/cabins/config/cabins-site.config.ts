@@ -3,7 +3,8 @@ import { CabinsSiteConfig } from '../models/cabins-site.model';
 export const CABINS_SITE_CONFIG: CabinsSiteConfig = {
   brand: {
     name: 'Bosque Andino',
-    logoUrl: '',
+    logoUrl:
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr0327cO-xN-c6QpLUFftRSF6ZSN4grfQUhfGk5XuwZA&s',
     logoAlt: 'Bosque Andino',
   },
 
@@ -49,7 +50,9 @@ export const CABINS_SITE_CONFIG: CabinsSiteConfig = {
 
   footer: {
     description: 'Cabañas acogedoras rodeadas de naturaleza en Pucón.',
+  },
 
+  social: {
     instagramUrl: '',
     facebookUrl: '',
   },

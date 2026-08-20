@@ -37,6 +37,9 @@ export interface CabinsSiteConfig {
 
   footer: {
     description: string;
+  };
+
+  social: {
     instagramUrl?: string;
     facebookUrl?: string;
   };
