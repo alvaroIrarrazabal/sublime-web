@@ -17,8 +17,7 @@ export class AboutSectionComponent {
   @Input() description =
     'Bosque Andino nace con la idea de ofrecer una estadía acogedora, rodeada de naturaleza y con todo lo necesario para disfrutar el sur de Chile con tranquilidad.';
 
-  @Input() image =
-    'https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8';
+  @Input() image ='';
 
   @Input() highlights: string[] = [
     'Entorno natural y tranquilo',
