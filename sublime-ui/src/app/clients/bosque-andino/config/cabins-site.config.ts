@@ -1,4 +1,5 @@
-import { CabinsSiteConfig } from '../models/cabins-site.model';
+import { CabinsSiteConfig } from '../../../features/cabins/models/cabins-site.model';
+
 
 export const CABINS_SITE_CONFIG: CabinsSiteConfig = {
   brand: {
@@ -67,5 +68,3 @@ export const CABINS_SITE_CONFIG: CabinsSiteConfig = {
     brandBackground: '248 250 252',
   },
 };
-
-

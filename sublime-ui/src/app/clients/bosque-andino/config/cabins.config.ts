@@ -1,4 +1,4 @@
-import { Cabin } from '../models/cabin.model';
+import { Cabin } from "../../../features/cabins/models/cabin.model";
 
 export const CABINS: Cabin[] = [
   {
