@@ -1,4 +1,5 @@
-import { CABINS_WEBSITE_CONFIG } from '../clients/cabanas-volcan-sur/config/cabins-website.config';
+import { CLIENTS, ClientKey } from './client-registry.config';
 
-export const ACTIVE_CLIENT_CONFIG = CABINS_WEBSITE_CONFIG;
+export const ACTIVE_CLIENT: ClientKey = 'cabanas-curarrehue';
 
+export const ACTIVE_CLIENT_CONFIG = CLIENTS[ACTIVE_CLIENT];
