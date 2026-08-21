@@ -9,8 +9,8 @@ import { AboutSectionComponent } from "./features/cabins/components/about-sectio
 import { ContactSectionComponent } from "./features/cabins/components/contact-section/contact-section.component";
 import { FooterComponent } from "./shared/components/footer/footer.component";
 import { ThemeService } from './shared/services/theme.service';
-//import { CABINS_WEBSITE_CONFIG } from './clients/bosque-andino/config/cabins-website.config';
-import { CABINS_WEBSITE_CONFIG } from './clients/cabanas-volcan-sur/config/cabins-website.config';
+
+import { ACTIVE_CLIENT_CONFIG } from './config/active-client.config';
 
 @Component({
   selector: 'app-root',
@@ -30,7 +30,7 @@ import { CABINS_WEBSITE_CONFIG } from './clients/cabanas-volcan-sur/config/cabin
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  readonly config = CABINS_WEBSITE_CONFIG;
+  readonly config = ACTIVE_CLIENT_CONFIG;
   readonly site = this.config.site;
 
   constructor(private readonly themeService: ThemeService) {
