@@ -9,7 +9,8 @@ import { AboutSectionComponent } from "./features/cabins/components/about-sectio
 import { ContactSectionComponent } from "./features/cabins/components/contact-section/contact-section.component";
 import { FooterComponent } from "./shared/components/footer/footer.component";
 import { ThemeService } from './shared/services/theme.service';
-import { CABINS_WEBSITE_CONFIG } from './clients/bosque-andino/config/cabins-website.config';
+//import { CABINS_WEBSITE_CONFIG } from './clients/bosque-andino/config/cabins-website.config';
+import { CABINS_WEBSITE_CONFIG } from './clients/cabanas-volcan-sur/config/cabins-website.config';
 
 @Component({
   selector: 'app-root',
