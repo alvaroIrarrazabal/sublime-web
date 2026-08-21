@@ -23,6 +23,5 @@ export class HeroComponent {
   @Input() secondaryLabel = 'Contactar';
   @Input() secondaryHref = '#contacto';
 
-  @Input() backgroundImage =
-    'https://images.unsplash.com/photo-1510798831971-661eb04b3739';
+  @Input() backgroundImage ='';
 }

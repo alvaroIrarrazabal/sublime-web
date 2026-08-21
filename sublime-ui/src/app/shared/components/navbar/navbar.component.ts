@@ -14,7 +14,11 @@ export interface NavItem {
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
-  @Input() brand = 'Sublime';
+  @Input() brandName = 'Sublime';
+
+  @Input() logoUrl = '';
+
+  @Input() logoAlt = 'Sublime';
 
   @Input() items: NavItem[] = [
     { label: 'Inicio', href: '#inicio' },
@@ -29,15 +33,13 @@ export class NavbarComponent {
 
   @Input() ctaUrl = '#contacto';
 
-isMenuOpen = false;
+  isMenuOpen = false;
 
-toggleMenu(): void {
-  this.isMenuOpen = !this.isMenuOpen;
-}
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 
-closeMenu(): void {
-  this.isMenuOpen = false;
-}
-
-
+  closeMenu(): void {
+    this.isMenuOpen = false;
+  }
 }

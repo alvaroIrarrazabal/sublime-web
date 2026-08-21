@@ -1,7 +1,6 @@
 import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ContainerComponent } from '../../../../shared/ui/container/container.component';
-import { GALLERY_IMAGES } from '../../config/gallery.config';
 import { GalleryImage } from '../../models/gallery-image.model';
 
 
@@ -14,5 +13,5 @@ import { GalleryImage } from '../../models/gallery-image.model';
   styleUrl: './gallery-section.component.scss',
 })
 export class GallerySectionComponent {
-  readonly images: GalleryImage[] = GALLERY_IMAGES;
+  @Input() images: GalleryImage[] = [];
 }

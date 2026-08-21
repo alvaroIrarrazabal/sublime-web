@@ -28,10 +28,10 @@ export class FooterComponent {
     { label: 'Contacto', href: '#contacto' },
   ];
 
-  @Input() phone = '+56 9 1234 5678';
-  @Input() email = 'reservas@bosqueandino.cl';
+  @Input() phone = '';
+  @Input() email = '';
 
-  @Input() whatsappUrl = 'https://wa.me/56912345678';
+  @Input() whatsappUrl = '';
 
   @Input() instagramUrl = '';
   @Input() facebookUrl = '';

@@ -1,5 +1,4 @@
-import { GalleryImage } from "../models/gallery-image.model";
-
+import { GalleryImage } from '../../../features/cabins/models/gallery-image.model';
 export const GALLERY_IMAGES: GalleryImage[] = [
   {
     src: 'https://images.unsplash.com/photo-1510798831971-661eb04b3739',

@@ -1,4 +1,4 @@
-import { CabinService } from '../models/cabin-service.model';
+import { CabinService } from '../../../features/cabins/models/cabin-service.model';
 
 export const CABIN_SERVICES: CabinService[] = [
   {

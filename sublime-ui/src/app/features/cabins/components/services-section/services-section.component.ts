@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ContainerComponent } from "../../../../shared/ui/container/container.component";
 import { IconComponent, IconName } from "../../../../shared/ui/icon/icon.component";
 import { CabinService } from '../../models/cabin-service.model';
-import { CABIN_SERVICES } from '../../config/services.config';
 
 
 
@@ -15,7 +14,6 @@ import { CABIN_SERVICES } from '../../config/services.config';
 })
 export class ServicesSectionComponent {
 
-  
-  readonly services: CabinService[] = CABIN_SERVICES;
+  @Input() services: CabinService[] = [];
   
 }

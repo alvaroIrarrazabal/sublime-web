@@ -1,5 +1,12 @@
+import { SiteTheme } from '../../../shared/models/site-theme.model';
+
+
 export interface CabinsSiteConfig {
-  brand: string;
+  brand: {
+    name: string;
+    logoUrl?: string;
+    logoAlt?: string;
+  };
 
   contact: {
     phone: string;
@@ -30,7 +37,12 @@ export interface CabinsSiteConfig {
 
   footer: {
     description: string;
+  };
+
+  social: {
     instagramUrl?: string;
     facebookUrl?: string;
   };
+
+  theme: SiteTheme;
 }

@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { ButtonComponent } from "./shared/ui/button/button.component";
-import { CardComponent } from './shared/ui/card/card.component';
-import { ContainerComponent } from "./shared/ui/container/container.component";
 import { NavbarComponent } from "./shared/components/navbar/navbar.component";
 import { HeroComponent } from './features/cabins/components/hero/hero.component';
 import { CabinsSectionComponent } from "./features/cabins/components/cabins-section/cabins-section.component";
@@ -11,9 +8,9 @@ import { GallerySectionComponent } from "./features/cabins/components/gallery-se
 import { AboutSectionComponent } from "./features/cabins/components/about-section/about-section.component";
 import { ContactSectionComponent } from "./features/cabins/components/contact-section/contact-section.component";
 import { FooterComponent } from "./shared/components/footer/footer.component";
-import { CABINS_SITE_CONFIG } from './features/cabins/config/cabins-site.config';
+import { ThemeService } from './shared/services/theme.service';
 
-
+import { ACTIVE_CLIENT_CONFIG } from './config/active-client.config';
 
 @Component({
   selector: 'app-root',
@@ -33,7 +30,10 @@ import { CABINS_SITE_CONFIG } from './features/cabins/config/cabins-site.config'
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  readonly site = CABINS_SITE_CONFIG;
+  readonly config = ACTIVE_CLIENT_CONFIG;
+  readonly site = this.config.site;
 
-
+  constructor(private readonly themeService: ThemeService) {
+    this.themeService.applyTheme(this.site.theme);
+  }
 }

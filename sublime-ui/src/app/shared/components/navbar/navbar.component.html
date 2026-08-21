@@ -1,19 +1,30 @@
 <header class="border-b border-slate-200 bg-white">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-
-    <div class="flex h-16 items-center justify-between">
-
+    <div class="flex h-20 items-center justify-between">
       <!-- Marca -->
-      <a href="#inicio" class="text-xl font-bold tracking-tight text-slate-900" (click)="closeMenu()">
-        {{ brand }}
+      <a href="#inicio" class="flex items-center gap-3" (click)="closeMenu()">
+        @if (logoUrl) {
+          <img
+            [src]="logoUrl"
+            [alt]="logoAlt"
+            class="h-16 w-16 object-contain"
+          />
+        } @else {
+          <span class="text-xl font-bold tracking-tight text-slate-900">
+            {{ brandName }}
+          </span>
+        }
       </a>
 
       <!-- Navegación desktop -->
       <nav class="hidden items-center gap-8 lg:flex">
         @for (item of items; track item.href) {
-        <a [href]="item.href" class="text-sm font-medium text-slate-600 transition hover:text-slate-900">
-          {{ item.label }}
-        </a>
+          <a
+            [href]="item.href"
+            class="text-sm font-medium text-slate-600 transition hover:text-slate-900"
+          >
+            {{ item.label }}
+          </a>
         }
       </nav>
 
@@ -25,50 +36,42 @@
       </div>
 
       <!-- Botón menú mobile/tablet -->
-      <button type="button"
+      <button
+        type="button"
         class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-slate-700 transition hover:bg-slate-50 lg:hidden"
-        [attr.aria-expanded]="isMenuOpen" aria-label="Abrir menú" (click)="toggleMenu()">
-
+        [attr.aria-expanded]="isMenuOpen"
+        aria-label="Abrir menú"
+        (click)="toggleMenu()"
+      >
         @if (isMenuOpen) {
-        <span class="text-2xl leading-none">
-          ×
-        </span>
+          <span class="text-2xl leading-none"> × </span>
         } @else {
-        <span class="text-2xl leading-none">
-          ☰
-        </span>
+          <span class="text-2xl leading-none"> ☰ </span>
         }
-
       </button>
-
     </div>
 
     <!-- Menú mobile/tablet -->
     @if (isMenuOpen) {
+      <div class="border-t border-slate-100 py-4 lg:hidden">
+        <nav class="flex flex-col">
+          @for (item of items; track item.href) {
+            <a
+              [href]="item.href"
+              class="rounded-lg px-3 py-3 text-base font-medium text-slate-700 transition hover:bg-slate-50"
+              (click)="closeMenu()"
+            >
+              {{ item.label }}
+            </a>
+          }
+        </nav>
 
-    <div class="border-t border-slate-100 py-4 lg:hidden">
-
-      <nav class="flex flex-col">
-
-        @for (item of items; track item.href) {
-        <a [href]="item.href"
-          class="rounded-lg px-3 py-3 text-base font-medium text-slate-700 transition hover:bg-slate-50"
-          (click)="closeMenu()">
-          {{ item.label }}
-        </a>
-        }
-
-      </nav>
-
-      <div class="mt-4">
-        <app-button [href]="ctaUrl" size="md">
-          {{ ctaLabel }}
-        </app-button>
+        <div class="mt-4">
+          <app-button [href]="ctaUrl" size="md">
+            {{ ctaLabel }}
+          </app-button>
+        </div>
       </div>
-
-    </div>
-
     }
-
   </div>
 </header>

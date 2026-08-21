@@ -1,5 +1,7 @@
 <app-navbar
-  [brand]="site.brand"
+  [brandName]="site.brand.name"
+  [logoUrl]="site.brand.logoUrl ?? ''"
+  [logoAlt]="site.brand.logoAlt ?? site.brand.name"
   ctaLabel="Reserva Ahora"
   [ctaUrl]="site.contact.whatsappUrl"
 >
@@ -17,11 +19,17 @@
 >
 </app-cabins-hero>
 
-<app-cabins-section></app-cabins-section>
+<app-cabins-section 
+[cabins]="config.cabins">
+</app-cabins-section>
 
-<app-services-section></app-services-section>
+<app-services-section
+ [services]="config.services">
+</app-services-section>
 
-<app-gallery-section></app-gallery-section>
+<app-gallery-section 
+[images]="config.gallery">
+</app-gallery-section>
 
 <app-about-section
   [eyebrow]="site.about.eyebrow"
@@ -42,12 +50,11 @@
 </app-contact-section>
 
 <app-footer
-  [brand]="site.brand"
   [description]="site.footer.description"
   [phone]="site.contact.phone"
   [email]="site.contact.email"
   [whatsappUrl]="site.contact.whatsappUrl"
-  [instagramUrl]="site.footer.instagramUrl ?? ''"
-  [facebookUrl]="site.footer.facebookUrl ?? ''"
+[instagramUrl]="site.social.instagramUrl ?? ''"
+[facebookUrl]="site.social.facebookUrl ?? ''"
 >
 </app-footer>

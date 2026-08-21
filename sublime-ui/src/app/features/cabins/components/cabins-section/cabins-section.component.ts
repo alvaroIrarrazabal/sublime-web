@@ -1,8 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ButtonComponent } from '../../../../shared/ui/button/button.component';
 import { CardComponent } from '../../../../shared/ui/card/card.component';
 import { ContainerComponent } from '../../../../shared/ui/container/container.component';
-import { CABINS } from '../../config/cabins.config';
 import { Cabin } from '../../models/cabin.model';
 
 
@@ -15,9 +14,5 @@ import { Cabin } from '../../models/cabin.model';
   styleUrl: './cabins-section.component.scss',
 })
 export class CabinsSectionComponent {
-
-
-  readonly cabins: Cabin[] = CABINS;
-
-  
+  @Input() cabins: Cabin[] = [];
 }
