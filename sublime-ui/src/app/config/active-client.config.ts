@@ -1,5 +1,12 @@
 import { CLIENTS, ClientKey } from './client-registry.config';
 
-export const ACTIVE_CLIENT: ClientKey = 'cabanas-volcan-sur';
+const runtimeClient = window.__SUBLIME_CONFIG__?.client;
+
+const defaultClient: ClientKey = 'bosque-andino';
+
+export const ACTIVE_CLIENT: ClientKey =
+  runtimeClient && runtimeClient in CLIENTS
+    ? (runtimeClient as ClientKey)
+    : defaultClient;
 
 export const ACTIVE_CLIENT_CONFIG = CLIENTS[ACTIVE_CLIENT];
