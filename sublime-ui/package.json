@@ -3,10 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+  "generate:client": "node scripts/generate-client-config.mjs",
+  "prestart": "npm run generate:client",
+  "start": "ng serve",
+  "prebuild": "npm run generate:client",
+  "build": "ng build",
+  "watch": "ng build --watch --configuration development",
+  "test": "ng test"
   },
   "private": true,
   "dependencies": {

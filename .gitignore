@@ -27,3 +27,4 @@ build/
 
 # Local configuration
 *.local
+/sublime-ui/public/client-config.js
