@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
   "generate:client": "node scripts/generate-client-config.mjs",
+  "create:client": "node scripts/create-client.mjs",
   "prestart": "npm run generate:client",
   "start": "ng serve",
   "prebuild": "npm run generate:client",
