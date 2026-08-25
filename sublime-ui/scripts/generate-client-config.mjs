@@ -1,10 +1,18 @@
-const allowedClients = [
-  'bosque-andino',
-  'cabanas-volcan-sur',
-  'cabanas-curarehue',
-];
+import { readdir, writeFile } from 'node:fs/promises';
+import path from 'node:path';
+
+const clientsRoot = path.resolve('src/app/clients');
+const outputPath = path.resolve('public/client-config.js');
 
 const defaultClient = 'bosque-andino';
+
+const entries = await readdir(clientsRoot, {
+  withFileTypes: true,
+});
+
+const allowedClients = entries
+  .filter((entry) => entry.isDirectory())
+  .map((entry) => entry.name);
 
 const client = process.env.SUBLIME_CLIENT || defaultClient;
 
@@ -19,8 +27,6 @@ const content = `window.__SUBLIME_CONFIG__ = {
 };
 `;
 
-await import('node:fs/promises').then(async ({ writeFile }) => {
-  await writeFile('public/client-config.js', content, 'utf8');
-});
+await writeFile(outputPath, content, 'utf8');
 
-console.log(`✓ Active Sublime client: ${client}`);
+console.log(`Active Sublime client: ${client}`);

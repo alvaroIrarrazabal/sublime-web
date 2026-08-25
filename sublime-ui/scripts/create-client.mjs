@@ -18,12 +18,12 @@ if (!slugPattern.test(clientSlug)) {
   process.exit(1);
 }
 
-const sourceClient = 'bosque-andino';
-
+const sourceConfigDir = path.resolve(
+  'templates/cabins-client/config'
+);
 const clientsRoot = path.resolve('src/app/clients');
 const assetsRoot = path.resolve('src/assets/clients');
 
-const sourceConfigDir = path.join(clientsRoot, sourceClient, 'config');
 const targetClientDir = path.join(clientsRoot, clientSlug);
 const targetConfigDir = path.join(targetClientDir, 'config');
 const targetAssetsDir = path.join(assetsRoot, clientSlug);
